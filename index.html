@@ -3,6 +3,14 @@
 <head>
   <meta charset="UTF-8">
   <title>Magdalena Nieświec — Film Criticism</title>
+  <!-- Font Awesome CDN for icons --> 
+  <link
+    rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+    integrity="sha512-papb3nRxuC2Wv89/JvlDE/HktwLFEJ2RzhU5Z7SXClNqa8BqBJiELrgq6W1lkbCqK55C3SMLZ9Jl8NUI8s3sBw=="
+    crossorigin="anonymous"
+    referrerpolicy="no-referrer"
+  />
   <style>
     body {
       margin: 0;
@@ -33,11 +41,16 @@
       margin-bottom: 1rem;
     }
     .social-links a {
-      margin: 0 0.5rem;
-      text-decoration: none;
-      color: #555;
-      font-size: 1.2rem;
-    }
+        margin: 0 0.7rem;
+  color: #555;
+  font-size: 1.8rem;  /* bigger icons */
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+.social-links a:hover {
+  color: #000; /* darker on hover */
+}
     .right-column {
       flex-grow: 1;
       padding: 2rem;
@@ -72,9 +85,15 @@
     
     <p>Hello, I’m Magda. I write about film, memory, intimacy, and the visual language of cinema.</p>
     <div class="social-links">
-      <a href="https://www.linkedin.com/in/magdalena-nie%C5%9Bwiec-b4b790281/" target="_blank">LinkedIn</a>
-      <a href="https://www.instagram.com/aerisolene/" target="_blank">Instagram</a>
-      <a href="https://letterboxd.com/aerisolene/" target="_blank">Letterboxd</a>
+      <a href="https://www.linkedin.com/in/magdalena-nie%C5%9Bwiec-b4b790281/" target="_blank" aria-label="Linkedin">
+        <i class="fab fa-linkedin"></i>
+      </a>
+      <a href="https://www.instagram.com/aerisolene/" target="_blank" aria-label="Instagram">
+        <i class="fab fa-instagram"></i>
+      </a>
+      <a href="https://letterboxd.com/aerisolene/" target="_blank" aria-label="Letterboxd"</a>
+        <i class="fas fa-film"></i>
+      </a>
     </div>
   </div>
 
