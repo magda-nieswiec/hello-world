@@ -1,1 +1,2 @@
 These are my first notes using GitHub!
+Now I added second line.
