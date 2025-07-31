@@ -1,3 +1,0 @@
-These are my first notes using GitHub!
-Now I added second line.
-This is a note on the experiment branch.
