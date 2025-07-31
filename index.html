@@ -1,22 +1,95 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8">
-    <title>Writing portfolio - test</title>
-    <style>
-      body {font-family: times-new-roman; 40px; line-height: 1.6; max-width: 700px;}
-      h1 {font-size: 2em;}
-      a {color: black; text-decoration: none;}
-    </style>
-  </head>
-  <body>
-    <h1>Magdalena Nieświec</h1>
-    <p>Welcome to my portfolio of film criticism and essays: introduction about me and links to my social medias below.</p>
- <h2>Featured Writing</h2>
+<head>
+  <meta charset="UTF-8">
+  <title>Magdalena Nieświec — Film Criticism</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Georgia', serif;
+      background-color: #faf9f6;
+      color: #333;
+      display: flex;
+      min-height: 100vh;
+    }
+    .left-column {
+      width: 35%;
+      background-color: #f0eee9;
+      padding: 2rem;
+      box-sizing: border-box;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      border-right: 1px solid #ddd;
+    }
+    .left-column img {
+      width: 150px;
+      border-radius: 50%;
+      margin-bottom: 1rem;
+    }
+    .left-column p {
+      text-align: center;
+      margin-bottom: 1rem;
+    }
+    .social-links a {
+      margin: 0 0.5rem;
+      text-decoration: none;
+      color: #555;
+      font-size: 1.2rem;
+    }
+    .right-column {
+      flex-grow: 1;
+      padding: 2rem;
+      box-sizing: border-box;
+    }
+    .right-column h2 {
+      font-weight: normal;
+      font-size: 1.5rem;
+      margin-bottom: 1rem;
+    }
+    .writing-list ul {
+      list-style: none;
+      padding: 0;
+    }
+    .writing-list li {
+      margin-bottom: 1rem;
+    }
+    .writing-list a {
+      text-decoration: none;
+      color: #222;
+      font-weight: bold;
+    }
+    .writing-list a:hover {
+      text-decoration: underline;
+    }
+  </style>
+</head>
+<body>
+
+  <div class="left-column">
+    <img src="profile.jpg" alt="Your profile photo">
+    <p>Hello, I’m Magda. I write about film, memory, intimacy, and the visual language of cinema.</p>
+    <div class="social-links">
+      <a href="https://www.linkedin.com/in/magdalena-nie%C5%9Bwiec-b4b790281/" target="_blank">LinkedIn</a>
+      <a href="https://www.instagram.com/aerisolene/" target="_blank">Instagram</a>
+      <a href="https://letterboxd.com/aerisolene/" target="_blank">Letterboxd</a>
+    </div>
+  </div>
+
+  <div class="right-column">
+    <h2>Reviews</h2>
+    <div class="writing-list">
+      <ul>
+        <li><a href="https://asianmoviepulse.com/2025/03/documentary-review-bumming-in-beijing-the-last-dreamers-1990-by-wu-wenguang/">Documentary Review: Bumming in Beijing: the Last Dreamers (1990) by Wu Wenguang</a></li>
+        <li><a href="https://asianmoviepulse.com/2025/07/film-review-have-you-seen-the-barefoot-god-1986-by-kim-soo-kil/">Film Review: Have You Seen the Barefoot God? (1986) by Kim Soo-kil</a></li>
+        <li><a href="https://ubiquarian.net/2025/07/the-dreamers-women-gave-birth-yugoslav-rocknroll/">"The Dreamers" - or how women gave birth to Yugoslav Rock'n'roll</a></li>
+      </ul>
+    </div>
+    <h2>Festival report</h2>
     <ul>
-      <li><a href="https://yoo-mika.tumblr.com/">Tumblr</a></li>
+      <li><a href="<https://www.filmweb.pl/article/JEONJU+2025%3A+Korea%C5%84ska+mekka+filmowa-161053">JEONJU 2025: Koreańska mekka filmowa</a>/li>
     </ul>
-    <h2>About Me</h2>
-    <p>Hi my name is Magda and I am writing about films.</p>
-  </body>
+  </div>
+
+</body>
 </html>
