@@ -13,8 +13,8 @@
     body {
       margin: 0;
       font-family: 'Georgia', serif;
-      background-color: #f0f7f3;
-      color: #2e3d29;
+      background-color: #1e2f20;
+      color: #c9d6ca;
       display: flex;
       min-height: 100vh;
        flex-wrap: wrap;
@@ -31,20 +31,20 @@
 }
     .left-column {
       width: 30%;
-      background-color: #cbe0c2;
+      background-color: #2f4f33;
       padding: 2rem;
       box-sizing: border-box;
       display: flex;
       flex-direction: column;
       align-items: center;
-      border-right: 1px solid #9fb18e;
+      border-right: 1px solid #254229;
     }
     .left-column img {
       width: 150px;
   border-radius: 50%;
   object-fit: cover;
   aspect-ratio: 1 / 1;
-  border: 2px solid #6b7b59;
+  border: 2px solid #254229;
     }
     .left-column p {
       text-align: center;
@@ -58,16 +58,23 @@
       margin-top: 1rem;
     }
     .social-links a {
-  color: #2e3d29;
+  color: #a3bfa0;
   font-size: 1.8rem;  /* bigger icons */
   text-decoration: none;
-  transition: color 0.3s ease;
+  transition: color 0.3s ease, color 0.3s ease;
+}
+    h2, h3 {
+  color: #c9d6ca;
 }
 
 .social-links a:hover {
-  color: #3a2f2b; /* darker on hover */
+    color: #e2f0db; /* your dark olive green */
+  transform: scale(1.2) rotate(10deg);
+  transition: transform 0.3s ease, color 0.3s ease;
+    box-shadow: 0 4px 8px rgba(46, 61, 41, 0.3);
 }
     .right-column {
+      background-color: #3f5f45;
       flex-grow: 1;
       width: 70%;
       padding: 2rem;
@@ -87,8 +94,8 @@
 
 .review-card {
  display: flex;
-      background-color: #ffffff;
-      border: 1px solid #9fb18e;
+      background-color: #8fa691
+      border: 1px solid #254229;
       padding: 1rem;
       border-radius: 12px;
       box-shadow: 1px 2px 4px rgba(0,0,0,0.05);
@@ -116,7 +123,7 @@
   object-fit: cover;
    flex-shrink: 0;
   border-radius: 6px;
-  border: 2px solid #9fb18e;
+  border: 2px solid #254229;
   box-shadow: 1px 2px 4px rgba(0, 0, 0, 0.1);
   display: block;
     }
@@ -126,7 +133,7 @@
 }
     .review-info h3 {
       margin: 0 0 0.4rem;
-      color: #2e3d29;
+      color: #c9d6ca;
       font-family: 'Playfair Display', serif;
       font-size: 1.3rem;
   font-weight: bold;
@@ -136,7 +143,7 @@
 
     .review-info .review-meta {
       font-size: 0.85rem;
-      color: #4e6142;
+      color: #c9d6ca;
       font-style: italic;
       margin-bottom: 0.4rem;
     }
@@ -144,11 +151,11 @@
     .review-info p {
       font-size: 0.95rem;
       line-height: 1.5;
-      color: #3a2f2b;
+      color: #c9d6ca;
     }
     .review-description {
   font-size: 0.95rem;
-  color: #2e3d29;
+  color: #c9d6ca;
   line-height: 1.4;
   margin-top: 0.2rem;
       display: -webkit-box;
@@ -217,16 +224,46 @@
   border-radius: 6px;
   transition: background-color 0.3s ease;
 }
+      /* Hide button on small screens */
+@media (max-width: 600px) {
+  .contact-button {
+    display: none;
+  }
+  /* Optional: show as a simple link on small screens */
+@media (max-width: 600px) {
+  .contact-link-mobile {
+    display: inline;
+    color: #a3bfa0;
+    margin-top: 1rem;
+    text-decoration: underline;
+  }
+}
 
 .contact-button:hover {
   background-color: #2e3d29;
 }
+      body, html {
+  height: 100%;
+  margin: 0;
+  font-family: 'Georgia', serif;
+  background-color: #1e2f20;
+  color: #c9d6ca;
+}
+
+.container {
+  display: flex;
+  min-height: 100vh; /* full viewport height */
+  align-items: stretch; /* make children same height */
+}
+
   </style>
 </head>
 <body>
+  <div class="container">
 <header class="site-header">
   <h1>Magda Nieświec – Film Criticism & Essays</h1>
 </header>
+  
   <aside class="left-column" role="complementary">
     <img src="profile.jpg" alt="profile photo"/>
     <h2 class="profile-title">About Me</h2>
@@ -237,7 +274,10 @@
 <br/>I’m deeply interested in countercultural and global youth movements of the 1960s. I especially enjoy discovering films and music from that era and incorporating them into my writing.
 
 </p>
+    <!-- Visible on large screens -->
     <a href="mailto:magda.nieswiec@gmail.com" class="contact-button">Contact Me</a>
+    <!-- Visible on small screens -->
+    <a href="mailto:magda.nieswiec@gmail.com" class="contact-link-mobile" style="display:none;">Contact Me</a>
   </br>
     <nav class="social-links" aria-label="social media links">
       <a href="https://www.linkedin.com/in/magdalena-nie%C5%9Bwiec-b4b790281/"
@@ -260,7 +300,6 @@
       </a>
     </nav>
   </aside> <!--closes left-column -->
-
   <main class="right-column">
     <h2>Reviews</h2>
     <section class="review-feed">
@@ -322,6 +361,6 @@
   <p>© 2025 Magda Nieświec. All rights reserved.</p>
 </footer>
   </main> <!--closes right-column -->
-
-</body>
+  </div>
+  </body>
 </html>
