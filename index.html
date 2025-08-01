@@ -83,6 +83,8 @@
       border-radius: 12px;
       box-shadow: 1px 2px 4px rgba(0,0,0,0.05);
       transition: transform 0.2s ease;
+  align-items: flex-start;
+  gap: 1.2rem;
 }
      .review-card:hover {
       transform: scale(1.01);
@@ -94,6 +96,7 @@
   display: flex;
   align-items: center;
   width: 100%;
+  gap: 1.2rem;
 }
 
 .review-image {
@@ -106,7 +109,10 @@
   box-shadow: 1px 2px 4px rgba(0, 0, 0, 0.1);
   display: block;
     }
-
+.review-info {
+  flex-grow: 1;
+  overflow: hidden;
+}
     .review-info h3 {
       margin: 0 0 0.4rem;
       font-size: 1.2rem;
@@ -125,6 +131,16 @@
       font-size: 0.95rem;
       line-height: 1.5;
       color: #3a2f2b;
+    }
+    .review-description {
+  font-size: 0.95rem;
+  color: #3a2f2b;
+  line-height: 1.4;
+  margin-top: 0.2rem;
+      display: -webkit-box;
+  -webkit-line-clamp: 3;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
     }
     /* Responsive */
     @media (max-width: 768px) {
@@ -183,6 +199,8 @@
        class="review-image"/>
      <div class="review-info">
        <h3>Film Review: Have You Seen the Barefoot God? (1986) by Kim Soo-kil</h3>
+       <p class="review-description">
+         Kim Soo-kil (also known by his Japanese name Hideyoshi Kin), had just graduated from the Japan Institute of the Moving Image when he directed “Have You Seen the Barefoot God?” in 1986...</p>
        <p class="review-meta">Published July 21, 2025, Asian Movie Pulse</p>
      </div>
    </a>
@@ -195,6 +213,9 @@
 <img src="sanjalice.jpg" alt="The Dreamers" class="review-image"/>
           <div class="review-info">
             <h3>“The Dreamers” – or how women gave birth to Yugoslav Rock’n’roll</h3>
+            <p class="review-description">
+              In 1964, three teenage girls in Yugoslavia, having filled their minds and hearts with Western music that they listened to on the Radio Luxembourg,
+              picked up guitars and microphones, and followed in The Beatles’ footsteps to carve out their own path into the rock’n’roll world.</p>
             <p class="review-meta">Published on July 25, 2025, Ubiquarian.net</p>
           </div>
         </a>
@@ -211,6 +232,9 @@
           <img src="jeonju.jpg" alt="jeonju logo" class="review-image"/>
         <div class="review-info">
           <h3>JEONJU 2025: Koreańska mekka filmowa</h3>
+          <p class="review-description">
+            Wyjazd do Jeonju po raz pierwszy realnie umożliwił mi przyjrzenie się tej mniej komercyjnej stronie uwielbianego
+            przeze mnie kina i jednocześnie otworzył oczy na jego nieznane dotychczas oblicze. </p>
           <p class="review-meta">Published on May 18, 2025, Filmweb</p>
         </div>
       </a>
