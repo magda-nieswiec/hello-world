@@ -163,6 +163,10 @@ body {
   border: 2px solid #254229;
   box-shadow: 1px 2px 4px rgba(0, 0, 0, 0.1);
 }
+    .review-image-top {
+  object-fit: cover;
+  object-position: top center;
+}
 .review-info {
   flex-grow: 1;
   overflow: hidden;
@@ -242,6 +246,14 @@ body {
     text-decoration: underline;
     margin-top: 1rem;
   }
+  .page-wrapper {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 1.5rem;
+  border-left: 1px solid #2e3d29;
+  border-right: 1px solid #2e3d29;
+}
+  
   /* Mobile styles */
     @media (max-width: 768px) {
       .container {
@@ -314,6 +326,7 @@ body {
   </style>
 </head>
 <body>
+  <div class="page-wrapper">
   <div class="container">
 <header class="site-header">
   <h1>Film Criticism & Essays</h1>
@@ -366,7 +379,7 @@ body {
             rel="noopener noreferrer">
             <img src="barefoot_god.jpg"
               alt="Have you seena barefoot god?"
-              class="review-image"/>
+              class="review-image review-image-top"/>
             <div class="review-info">
               <h3>Film Review: Have You Seen the Barefoot God? (1986) by Kim Soo-kil</h3>
               <p class="review-description">
@@ -382,7 +395,7 @@ body {
         <a href="https://ubiquarian.net/2025/07/the-dreamers-women-gave-birth-yugoslav-rocknroll/"
           target="_blank"
           rel="noopener noreferrer">
-          <img src="sanjalice.jpg" alt="The Dreamers" class="review-image"/>
+          <img src="sanjalice.jpg" alt="The Dreamers" class="review-image review-image-top"/>
           <div class="review-info">
             <h3>“The Dreamers” – or how women gave birth to Yugoslav Rock’n’roll</h3>
             <p class="review-description">
@@ -399,7 +412,7 @@ body {
            target=_blank"
            rel="noopener noreferrer">
         
-          <img src="jeonju.jpg" alt="jeonju logo" class="review-image"/>
+          <img src="jeonju1.jpg" alt="kontinental radu jude" class="review-image"/>
            <div class="review-info">
              <h3>JEONJU 2025: Koreańska mekka filmowa</h3>
              <p class="review-description">
@@ -415,6 +428,7 @@ body {
   <p>© 2025 Magda Nieświec. All rights reserved.</p>
     </footer>
   </main> <!--closes right-column -->
+  </div>
   </div>
   </body>
 </html>
