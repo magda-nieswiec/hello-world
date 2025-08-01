@@ -10,210 +10,65 @@
   />
   <link href="https://fonts.googleapis.com/css2?family=Playfair+Display&family=EB+Garamond&display=swap" rel="stylesheet">
   <style>
-    body {
-      margin: 0;
-      font-family: 'Georgia', serif;
-      background-color: #1e2f20;
-      color: #c9d6ca;
-      display: flex;
-      min-height: 100vh;
-       flex-wrap: wrap;
-    }
-    .site-header {
+    * {
+  box-sizing: border-box;
+}
+body {
+  margin: 0;
+  font-family: 'Georgia', serif;
+  background-color: #1e2f20;
+  color: #c9d6ca;
+  flex-wrap: wrap;
+  min-height: 100vh;
+}
+.site-header {
   width: 100%;
   padding: 2rem;
-  background-color: #d4e4cd;
+  background-color: #2e3d29;
   font-family: 'Playfair Display', serif;
   text-align: center;
   font-size: 2rem;
-  color: #2e3d29;
+  color: #d4e4cd;
   border-bottom: 1px solid #9fb18e;
 }
-    .left-column {
-      width: 30%;
-      background-color: #2f4f33;
-      padding: 2rem;
-      box-sizing: border-box;
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      border-right: 1px solid #254229;
-    }
-    .left-column img {
-      width: 150px;
+.container {
+  display: flex;
+  flex-wrap: wrap;
+  min-height: 100vh;
+}
+.left-column {
+  width: 30%;
+  background-color: #2f4f33;
+  padding: 2rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  border-right: 1px solid #254229;
+}
+.left-column img {
+  width: 150px;
   border-radius: 50%;
   object-fit: cover;
   aspect-ratio: 1 / 1;
   border: 2px solid #254229;
-    }
-    .left-column p {
-      text-align: center;
-      font-size: 0.95rem;
-      margin-bottom: 1.5rem;
-    }
-    
-    .social-links {
-      display: flex;
-      gap: 1.5rem;
-      margin-top: 1rem;
-    }
-    .social-links a {
-  color: #a3bfa0;
-  font-size: 1.8rem;  /* bigger icons */
-  text-decoration: none;
-  transition: color 0.3s ease, color 0.3s ease;
 }
-    h2, h3 {
-  color: #c9d6ca;
-}
-
-.social-links a:hover {
-    color: #e2f0db; /* your dark olive green */
-  transform: scale(1.2) rotate(10deg);
-  transition: transform 0.3s ease, color 0.3s ease;
-    box-shadow: 0 4px 8px rgba(46, 61, 41, 0.3);
-}
-    .right-column {
-      background-color: #3f5f45;
-      flex-grow: 1;
-      width: 70%;
-      padding: 2rem;
-      box-sizing: border-box;
-    }
-    .right-column h2 {
-       font-family: 'Playfair Display', serif;
-      font-weight: normal;
-      font-size: 1.5rem;
-      margin-bottom: 1rem;
-    }
-    .review-feed {
-  display: flex;
-  flex-direction: column;
-  gap: 1.5rem;
-}
-
-.review-card {
- display: flex;
-      background-color: #8fa691
-      border: 1px solid #254229;
-      padding: 1rem;
-      border-radius: 12px;
-      box-shadow: 1px 2px 4px rgba(0,0,0,0.05);
-      transition: transform 0.2s ease, box-shadow 0.2s ease;;
-  align-items: flex-start;
-  gap: 1.2rem;
-}
-     .review-card:hover {
-      transform: scale(1.01);
-       box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
-    }
-
-.review-card a {
-  color: inherit;
-  text-decoration: none;
-  display: flex;
-  align-items: center;
-  width: 100%;
-  gap: 1.2rem;
-}
-
-.review-image {
-       width: 140px;
-  height: 100px;
-  object-fit: cover;
-   flex-shrink: 0;
-  border-radius: 6px;
-  border: 2px solid #254229;
-  box-shadow: 1px 2px 4px rgba(0, 0, 0, 0.1);
-  display: block;
-    }
-.review-info {
-  flex-grow: 1;
-  overflow: hidden;
-}
-    .review-info h3 {
-      margin: 0 0 0.4rem;
-      color: #c9d6ca;
-      font-family: 'Playfair Display', serif;
-      font-size: 1.3rem;
-  font-weight: bold;
-  text-decoration: underline;
-  text-underline-offset: 4px;
-    }
-
-    .review-info .review-meta {
-      font-size: 0.85rem;
-      color: #c9d6ca;
-      font-style: italic;
-      margin-bottom: 0.4rem;
-    }
-
-    .review-info p {
-      font-size: 0.95rem;
-      line-height: 1.5;
-      color: #c9d6ca;
-    }
-    .review-description {
-  font-size: 0.95rem;
-  color: #c9d6ca;
-  line-height: 1.4;
-  margin-top: 0.2rem;
-      display: -webkit-box;
-  -webkit-line-clamp: 3;
-  -webkit-box-orient: vertical;
-  overflow: hidden;
-    }
-    .read-more {
-  font-size: 0.9rem;
-  font-weight: 500;
-  color: 4e6142;
-  display: inline-block;
-  margin-top: 0.3rem;
-  transition: color 0.2s ease;
-}
-
-.read-more:hover {
-  color: #2e3d29;
-  text-decoration: underline;
-}
-    /* Responsive */
-    @media (max-width: 768px) {
-      body {
-        flex-direction: column;
-      }
-      .left-column,
-      .right-column {
-        width: 100%;
-        border-right: none;
-        border-bottom: 1px solid #c7b288;
-      }
-      .right-column {
-        border-bottom: none;
-      }
-      .site-footer {
-  width: 100%;
+.left-column p {
   text-align: center;
-  padding: 1.5rem;
-  background-color: #cbe0c2;
-  color: #2e3d29;
-  font-size: 0.9rem;
-  border-top: 1px solid #9fb18e;
+  font-size: 0.95rem;
+  margin-bottom: 1.5rem;
 }
-      .profile-title {
+.profile-title {
   font-family: 'Playfair Display', serif;
   font-size: 1.4rem;
-  color: #2e3d29;
+  color: #e2f2dc;
   margin-bottom: 1rem;
 }
-
 .profile-bio {
   font-size: 0.95rem;
   line-height: 1.6;
-  color: #2e3d29;
   text-align: center;
-  margin-bottom: 1.5rem;
 }
-      .contact-button {
+.contact-button .contact-link-mobile {
   display: inline-block;
   margin-top: 1rem;
   padding: 0.6rem 1.2rem;
@@ -224,38 +79,152 @@
   border-radius: 6px;
   transition: background-color 0.3s ease;
 }
-      /* Hide button on small screens */
-@media (max-width: 600px) {
-  .contact-button {
-    display: none;
-  }
-  /* Optional: show as a simple link on small screens */
-@media (max-width: 600px) {
-  .contact-link-mobile {
-    display: inline;
-    color: #a3bfa0;
-    margin-top: 1rem;
-    text-decoration: underline;
-  }
-}
-
 .contact-button:hover {
   background-color: #2e3d29;
 }
-      body, html {
-  height: 100%;
-  margin: 0;
-  font-family: 'Georgia', serif;
-  background-color: #1e2f20;
-  color: #c9d6ca;
-}
-
-.container {
+.social-links {
   display: flex;
-  min-height: 100vh; /* full viewport height */
-  align-items: stretch; /* make children same height */
+  gap: 1.5rem;
+  margin-top: 1rem;
+}
+.social-links a {
+  color: #a3bfa0;
+  font-size: 1.8rem;
+  text-decoration: none;
+  transition: color 0.3s ease, transform 0.3s ease;
+}
+.social-links a:hover {
+  color: #e2f0db;
+  transform: scale(1.2) rotate(10deg);
+  box-shadow: 0 4px 8px rgba(46, 61, 41, 0.3);
 }
 
+.right-column {
+  flex-grow: 1;
+  width: 70%;
+  background-color: #3f5f45;
+  padding: 2rem;
+}
+.right-column h2 {
+  font-family: 'Playfair Display', serif;
+  font-weight: normal;
+  font-size: 1.5rem;
+  margin-bottom: 1rem;
+}
+.review-feed {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+.review-card {
+  display: flex;
+  background-color: #6f856d;
+  border: 1px solid #254229;
+  padding: 1rem;
+  border-radius: 12px;
+  box-shadow: 1px 2px 4px rgba(0,0,0,0.05);
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+  align-items: flex-start;
+  gap: 1.2rem;
+}
+.review-card:hover {
+  transform: scale(1.01);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+}
+.review-card a {
+  color: inherit;
+  text-decoration: none;
+  display: flex;
+  align-items: center;
+  width: 100%;
+  gap: 1.2rem;
+}
+.review-image {
+  width: 140px;
+  height: 100px;
+  object-fit: cover;
+  flex-shrink: 0;
+  border-radius: 6px;
+  border: 2px solid #254229;
+  box-shadow: 1px 2px 4px rgba(0, 0, 0, 0.1);
+}
+.review-info {
+  flex-grow: 1;
+  overflow: hidden;
+}
+.review-info h3 {
+  margin: 0 0 0.4rem;
+  color: #e1f2df;
+  font-family: 'Playfair Display', serif;
+  font-size: 1.3rem;
+  font-weight: bold;
+  text-decoration: underline;
+  text-underline-offset: 4px;
+}
+.review-info .review-meta {
+  font-size: 0.85rem;
+  color: #d2e6d0;
+  font-style: italic;
+  margin-bottom: 0.4rem;
+}
+.review-info p {
+  font-size: 0.95rem;
+  line-height: 1.5;
+}
+.review-description {
+  font-size: 0.95rem;
+  color: #eaf7e6;
+  line-height: 1.4;
+  margin-top: 0.2rem;
+  display: -webkit-box;
+  -webkit-line-clamp: 3;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+.read-more {
+  font-size: 0.9rem;
+  font-weight: 500;
+  color: #dcebd3;
+  display: inline-block;
+  margin-top: 0.3rem;
+  transition: color 0.2s ease;
+}
+.read-more:hover {
+  color: #b6d4ae;
+  text-decoration: underline;
+}
+.site-footer {
+  width: 100%;
+  text-align: center;
+  padding: 1.5rem;
+  background-color: #263a2b;
+  color: #e2f0db;
+  font-size: 0.9rem;
+  border-top: 1px solid #3a4d39;
+  margin-top: 2rem;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .container {
+    flex-direction: column;
+  }
+  .left-column,
+  .right-column {
+    width: 100%;
+    border-right: none;
+    padding: 1.5rem;
+  }
+  .contact-button {
+    display: none;
+  }
+  .contact-link-mobile {
+    display: inline;
+    color: #a3bfa0;
+    text-decoration: underline;
+    margin-top: 1rem;
+  }
+}
   </style>
 </head>
 <body>
@@ -264,14 +233,14 @@
   <h1>Magda Nieświec – Film Criticism & Essays</h1>
 </header>
   
-  <aside class="left-column" role="complementary">
+  <div class="left-column">
     <img src="profile.jpg" alt="profile photo"/>
     <h2 class="profile-title">About Me</h2>
     <p class="profile-bio">
       Hi, I’m Magda, a Kraków-based writer and film professional with academic roots in Intercultural Relations and Film Studies & New Media from Jagiellonian University.
       I currently work as part of the production team at the Krakow Film Festival and serve as a programmer for the short film section at the Etiuda & Anima International Film Festival.
-    <br/>I specialize in Southeast Asian cinema, focusing on underrepresented narratives and historical resistance in visual media.
-<br/>I’m deeply interested in countercultural and global youth movements of the 1960s. I especially enjoy discovering films and music from that era and incorporating them into my writing.
+    <p></p>I specialize in Southeast Asian cinema, focusing on underrepresented narratives and historical resistance in visual media.
+I’m deeply interested in countercultural and global youth movements of the 1960s. I especially enjoy discovering films and music from that era and incorporating them into my writing.
 
 </p>
     <!-- Visible on large screens -->
@@ -299,33 +268,34 @@
         <i class="fas fa-film"></i>
       </a>
     </nav>
-  </aside> <!--closes left-column -->
-  <main class="right-column">
+  </div> <!--closes left-column -->
+  
+    <main class="right-column">
     <h2>Reviews</h2>
-    <section class="review-feed">
-      
-      <article class="review-card">
-   <a href="https://asianmoviepulse.com/2025/07/film-review-have-you-seen-the-barefoot-god-1986-by-kim-soo-kil/"
-     target="_blank"
-     rel="noopener noreferrer">
-     <img src="barefoot_god.jpg"
-       alt="Have you seena barefoot god?"
-       class="review-image"/>
-     <div class="review-info">
-       <h3>Film Review: Have You Seen the Barefoot God? (1986) by Kim Soo-kil</h3>
-       <p class="review-description">
-         Kim Soo-kil (also known by his Japanese name Hideyoshi Kin), had just graduated from the Japan Institute of the Moving Image when he directed “Have You Seen the Barefoot God?” in 1986...</p>
-       <span class="read-more">Read full review →</span>
-       <p class="review-meta">Published July 21, 2025, Asian Movie Pulse</p>
-     </div>
-   </a>
-      </article>
+      <section class="review-feed">
+     
+        <article class="review-card">
+          <a href="https://asianmoviepulse.com/2025/07/film-review-have-you-seen-the-barefoot-god-1986-by-kim-soo-kil/"
+            target="_blank"
+            rel="noopener noreferrer">
+            <img src="barefoot_god.jpg"
+              alt="Have you seena barefoot god?"
+              class="review-image"/>
+            <div class="review-info">
+              <h3>Film Review: Have You Seen the Barefoot God? (1986) by Kim Soo-kil</h3>
+              <p class="review-description">
+                Kim Soo-kil (also known by his Japanese name Hideyoshi Kin), had just graduated from the Japan Institute of the Moving Image when he directed “Have You Seen the Barefoot God?” in 1986...</p>
+              <span class="read-more">Read full review →</span>
+              <p class="review-meta">Published July 21, 2025, Asian Movie Pulse</p>
+            </div>
+          </a>
+        </article>
        
         <article class="review-card">
         <a href="https://ubiquarian.net/2025/07/the-dreamers-women-gave-birth-yugoslav-rocknroll/"
           target="_blank"
           rel="noopener noreferrer">
-<img src="sanjalice.jpg" alt="The Dreamers" class="review-image"/>
+          <img src="sanjalice.jpg" alt="The Dreamers" class="review-image"/>
           <div class="review-info">
             <h3>“The Dreamers” – or how women gave birth to Yugoslav Rock’n’roll</h3>
             <p class="review-description">
@@ -340,26 +310,26 @@
     
     <h2>Festival report</h2>
      <section class="review-feed">
-        <article class="review-card">
-      <a href="<https://www.filmweb.pl/article/JEONJU+2025%3A+Korea%C5%84ska+mekka+filmowa-161053"
-        target=_blank"
-        rel="noopener noreferrer">
+       <article class="review-card">
+         <a href="https://www.filmweb.pl/article/JEONJU+2025%3A+Korea%C5%84ska+mekka+filmowa-161053"
+           target=_blank"
+           rel="noopener noreferrer">
         
           <img src="jeonju.jpg" alt="jeonju logo" class="review-image"/>
-        <div class="review-info">
-          <h3>JEONJU 2025: Koreańska mekka filmowa</h3>
-          <p class="review-description">
-            Wyjazd do Jeonju po raz pierwszy realnie umożliwił mi przyjrzenie się tej mniej komercyjnej stronie uwielbianego
-            przeze mnie kina i jednocześnie otworzył oczy na jego nieznane dotychczas oblicze. </p>
-          <span class="read-more">Read more →</span>
-          <p class="review-meta">Published on May 18, 2025, Filmweb</p>
-        </div>
-      </a>
+           <div class="review-info">
+             <h3>JEONJU 2025: Koreańska mekka filmowa</h3>
+             <p class="review-description">
+               Wyjazd do Jeonju po raz pierwszy realnie umożliwił mi przyjrzenie się tej mniej komercyjnej stronie uwielbianego
+               przeze mnie kina i jednocześnie otworzył oczy na jego nieznane dotychczas oblicze. </p>
+             <span class="read-more">Read more →</span>
+             <p class="review-meta">Published on May 18, 2025, Filmweb</p>
+           </div>
+         </a>
         </article>
      </section>
     <footer class="site-footer">
   <p>© 2025 Magda Nieświec. All rights reserved.</p>
-</footer>
+    </footer>
   </main> <!--closes right-column -->
   </div>
   </body>
