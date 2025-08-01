@@ -8,6 +8,7 @@
     rel="stylesheet"
     href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
   />
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display&family=EB+Garamond&display=swap" rel="stylesheet">
   <style>
     body {
       margin: 0;
@@ -80,11 +81,17 @@
 }
 
 .review-card {
-  background: #fff;
-  border: 1px solid #ddd;
-  border-radius: 12px;
-  overflow: hidden;
-  transition: box-shadow 0.3s;
+  background: #fffdf9;
+  border: 1px solid #d6cfc7;
+  padding: 1rem;
+  display: flex;
+  gap: 1rem;
+  align-items: center;
+  box-shadow: 2px 2px 10px rgba(0,0,0,0.05);
+  border-radius: 8px;
+  margin-bottom: 2rem;
+  max-width: 600px;
+  transition: transform 0.2s ease;
 }
 
 .review-card a {
@@ -98,11 +105,14 @@
   width: 100px;
   height: 100px;
   object-fit: cover;
-  flex-shrink: 0;
+  border: 1px solid #aaa;
+  border-radius: 4px;
 }
 
 .review-info {
-  padding: 1rem;
+  font-size: 0.9rem;
+  color: #666;
+  margin-top: 0.2rem;
 }
 
 .review-info h3 {
@@ -118,6 +128,23 @@
 
 .review-card:hover {
   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    transform: translateY(-2px);
+}
+    body {
+  font-family: 'EB Garamond', serif;
+  background-color: #f8f5f0;
+  color: #3b3b3b;
+}
+.review-info h3 {
+  font-family: 'Playfair Display', serif;
+  font-size: 1.4rem;
+  color: #2c2c2c;
+}
+    .review-meta {
+  font-size: 0.75rem;
+  font-style: italic;
+  color: #a78f75;
+  margin-top: 0.4rem;
 }
   </style>
 </head>
@@ -150,7 +177,7 @@
      <img src="barefoot_god.jpg" alt="Have you seena barefoot god?">
      <div class="review-info">
        <h3>Film Review: Have You Seen the Barefoot God? (1986) by Kim Soo-kil</h3>
-       <p>Published on Asian Movie Pulse</p>
+       <p class="review-meta">Published July 21, 2025, Asian Movie Pulse</p>
      </div>
    </a>
       </div>
@@ -160,7 +187,7 @@
 <img src="sanjalice.jpg" alt="The Dreamers">
           <div class="review-info">
             <h3>“The Dreamers” – or how women gave birth to Yugoslav Rock’n’roll</h3>
-            <p>Published on Ubiquarian.net</p>
+            <p class="review-meta">Published on July 25, 2025, Ubiquarian.net</p>
           </div>
         </a>
         </div>
@@ -173,7 +200,7 @@
           <img src="jeonju.jpg" alt="jeonju logo">
         <div class="review-info">
           <h3>JEONJU 2025: Koreańska mekka filmowa</h3>
-          <p>Published on Filmweb</p>
+          <p class="review-meta">Published on May 18, 2025, Filmweb</p>
         </div>
       </a>
         </div>
