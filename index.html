@@ -2,6 +2,7 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Film Criticism</title>
   <!-- Font Awesome CDN for icons --> 
   <link
@@ -15,6 +16,7 @@
 }
 body {
   margin: 0;
+  padding: 0;
   font-family: 'Georgia', serif;
   background-color: #1e2f20;
   color: #c9d6ca;
@@ -67,6 +69,7 @@ body {
   font-size: 0.95rem;
   line-height: 1.6;
   text-align: center;
+  margin-bottom: 1.5rem;
 }
 .contact-button {
   display: inline-block;
@@ -130,7 +133,7 @@ body {
 }
 .review-card {
   display: flex;
-  background-color: #6f856d;
+  background-color: #d4e4cd;
   border: 1px solid #254229;
   padding: 1rem;
   border-radius: 12px;
@@ -239,7 +242,51 @@ body {
     text-decoration: underline;
     margin-top: 1rem;
   }
-}
+  /* Mobile styles */
+    @media (max-width: 768px) {
+      .left-column,
+      .right-column {
+        width: 100%;
+        padding: 1.5rem;
+        border: none;
+      }
+
+      .review-card {
+        flex-direction: column;
+        align-items: flex-start;
+      }
+
+      .review-image {
+        width: 100%;
+        height: auto;
+      }
+
+      .review-info {
+        width: 100%;
+      }
+
+      .site-header {
+        font-size: 1.5rem;
+        padding: 1rem;
+      }
+
+      .contact-button {
+        display: none;
+      }
+
+      .contact-link-mobile {
+        display: inline-block;
+        font-size: 1rem;
+        margin-top: 1rem;
+        color: #a3bfa0;
+        text-decoration: underline;
+      }
+
+      .social-links {
+        flex-wrap: wrap;
+        justify-content: center;
+        font-size: 1.4rem;
+      }
   </style>
 </head>
 <body>
@@ -248,7 +295,7 @@ body {
   <h1>Magda Nieświec – Film Criticism & Essays</h1>
 </header>
   
-  <div class="left-column">
+  <aside class="left-column">
     <img src="profile.jpg" alt="profile photo"/>
     <h2 class="profile-title">About Me</h2>
     <p class="profile-bio">
@@ -283,7 +330,7 @@ body {
         <i class="fas fa-film"></i>
       </a>
     </nav>
-  </div> <!--closes left-column -->
+  </aside> <!--closes left-column -->
   
     <main class="right-column">
     <h2>Reviews</h2>
