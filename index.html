@@ -68,7 +68,18 @@ body {
   line-height: 1.6;
   text-align: center;
 }
-.contact-button .contact-link-mobile {
+.contact-button {
+  display: inline-block;
+  margin-top: 1rem;
+  padding: 0.6rem 1.2rem;
+  background-color: #4e6142;
+  color: #fff;
+  text-decoration: none;
+  font-size: 0.95rem;
+  border-radius: 6px;
+  transition: background-color 0.3s ease;
+}
+    .contact-link-mobile {
   display: inline-block;
   margin-top: 1rem;
   padding: 0.6rem 1.2rem;
@@ -110,6 +121,7 @@ body {
   font-weight: normal;
   font-size: 1.5rem;
   margin-bottom: 1rem;
+  text-align: center;
 }
 .review-feed {
   display: flex;
@@ -216,10 +228,13 @@ body {
     padding: 1.5rem;
   }
   .contact-button {
-    display: none;
+    display: inline-block;
+    color: #a3bfa0;
+    text-decoration: underline;
+    margin-top: 1rem;
   }
   .contact-link-mobile {
-    display: inline;
+    display: inline-block;
     color: #a3bfa0;
     text-decoration: underline;
     margin-top: 1rem;
@@ -237,10 +252,10 @@ body {
     <img src="profile.jpg" alt="profile photo"/>
     <h2 class="profile-title">About Me</h2>
     <p class="profile-bio">
-      Hi, I’m Magda, a Kraków-based writer and film professional with academic roots in Intercultural Relations and Film Studies & New Media from Jagiellonian University.
+      Hello, I’m Magda, a Kraków-based writer and a film professional with academic roots in Intercultural Relations and Film Studies & New Media from Jagiellonian University.
       I currently work as part of the production team at the Krakow Film Festival and serve as a programmer for the short film section at the Etiuda & Anima International Film Festival.
-    <p></p>I specialize in Southeast Asian cinema, focusing on underrepresented narratives and historical resistance in visual media.
-I’m deeply interested in countercultural and global youth movements of the 1960s. I especially enjoy discovering films and music from that era and incorporating them into my writing.
+      I specialize in Southeast Asian cinema, focusing on underrepresented narratives and historical resistance in visual media.
+      I’m deeply interested in countercultural and global youth movements of the 1960s. I especially enjoy discovering films and music from that era and incorporating them into my writing.
 
 </p>
     <!-- Visible on large screens -->
@@ -284,7 +299,8 @@ I’m deeply interested in countercultural and global youth movements of the 196
             <div class="review-info">
               <h3>Film Review: Have You Seen the Barefoot God? (1986) by Kim Soo-kil</h3>
               <p class="review-description">
-                Kim Soo-kil (also known by his Japanese name Hideyoshi Kin), had just graduated from the Japan Institute of the Moving Image when he directed “Have You Seen the Barefoot God?” in 1986...</p>
+                Kim Soo-kil (also known by his Japanese name Hideyoshi Kin), had just graduated from the Japan Institute of the Moving Image when he directed “Have You Seen the Barefoot God?” in 1986.
+              The script was written by Nobuyuki Nishimura, and after winning the academy’s screenwriting competition, it was picked up and produced by the Art Theatre Guild.</p>
               <span class="read-more">Read full review →</span>
               <p class="review-meta">Published July 21, 2025, Asian Movie Pulse</p>
             </div>
@@ -306,10 +322,7 @@ I’m deeply interested in countercultural and global youth movements of the 196
           </div>
         </a>
         </article>
-    </section>
-    
-    <h2>Festival report</h2>
-     <section class="review-feed">
+  
        <article class="review-card">
          <a href="https://www.filmweb.pl/article/JEONJU+2025%3A+Korea%C5%84ska+mekka+filmowa-161053"
            target=_blank"
